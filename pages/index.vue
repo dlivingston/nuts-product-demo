@@ -7,7 +7,7 @@
       <div class="row justify-content-center">
         <div class="card col-6 col-md-4" v-for="product in product_listing" :key="product.id" @click="$bvModal.show(`modal-${product.id}`)">
           <h2>{{product.masterData.current.name.en}}</h2>
-          <img :src="product.masterData.current.masterVariant.images[0].url" :alt="product.masterData.current.name.en">
+          <img :src="product.masterData.current.masterVariant.images[0].url" :alt="product.masterData.current.name.en" class="img-fluid">
           <b-modal :ref="`modal-${product.id}`" :id="`modal-${product.id}`" :title="product.masterData.current.name.en">
             <p>{{product.masterData.current.description.en}}</p>
             <div class="row">
